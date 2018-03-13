@@ -21,7 +21,7 @@ class Application
           resp.write "#{@@cart[1]}"
         end
       elsif req.path.match(/add/)
-        binding.pry
+        # binding.pry
         if @@cart.include?(req.params["item"])
           resp.write "added Figs"
           @@cart << req.params["item"]
