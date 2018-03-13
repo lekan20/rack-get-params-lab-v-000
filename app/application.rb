@@ -26,7 +26,7 @@ class Application
           resp.write "added Figs"
           @@cart << req.params["item"]
         else
-          "We dont have that item"
+          resp.write "We dont have that item"
         end
     else
       resp.write "Path Not Found"
