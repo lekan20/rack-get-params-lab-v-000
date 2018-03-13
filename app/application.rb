@@ -22,9 +22,9 @@ class Application
         end
       elsif req.path.match(/add/)
         binding.pry
-        if !@@cart.include?("Figs")
+        if @@cart.include?(req.params["item"])
           resp.write "added Figs"
-          @@cart << "Figs"
+          @@cart << req.params["item"]
         else
           "We dont have that item"
         end
