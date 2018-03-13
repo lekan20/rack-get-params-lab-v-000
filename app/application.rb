@@ -18,8 +18,7 @@ class Application
         if @@cart.empty?
           resp.write "Your cart is empty"
         else
-          resp.write "#{@@cart[0]}\n"
-          resp.write "#{@@cart[1]}"
+          resp.write "#{@@cart.join("\n")}"
         end
       elsif req.path.match(/add/)
         if !@@cart.include?(req.params["item"])
